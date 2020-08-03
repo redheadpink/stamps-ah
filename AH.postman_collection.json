@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "ed5b74d0-b1d6-45b3-922b-b497071c8c97",
+		"name": "AH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get coupons",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bdb982ef-a011-4a64-9160-f846ddb57143",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://stvq1rxmc6.execute-api.eu-west-3.amazonaws.com/",
+					"protocol": "https",
+					"host": [
+						"stvq1rxmc6",
+						"execute-api",
+						"eu-west-3",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create coupon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Encoding",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"{{$timestamp}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stvq1rxmc6.execute-api.eu-west-3.amazonaws.com/",
+					"protocol": "https",
+					"host": [
+						"stvq1rxmc6",
+						"execute-api",
+						"eu-west-3",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
